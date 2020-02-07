@@ -9,7 +9,7 @@ This notebook provides a simple example of how to setup an MDP and use Value Ite
 
 ## Quick Start
 ```
-pip install -r requirements.txt
+pip install -r requirements.txt # may need to sudo depending on the permissions of your environment
 jupyter-notebook pymdptoolbox_example.ipynb
 ```
 
