@@ -70,7 +70,8 @@ def make_reward(matrix, n_states):
     :param n_states:
     :return:
     """
-    reward_matrix_quit = - np.array(range(0, n_states)).reshape(-1, 1)  # convert vector to n X 1 matrix
+    reward_matrix_quit = - np.array(range(n_states)).reshape(-1, 1)  # convert vector to n X 1 matrix
+    reward_matrix_quit[0] = 0
     matrix[1] = np.concatenate((matrix[1, :n_states, :n_states - 1], reward_matrix_quit), axis=1)  # cbind
     return matrix
 
